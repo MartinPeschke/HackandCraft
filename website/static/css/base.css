@@ -135,7 +135,6 @@ color: hsla(0,0%,100%,1);
 a {
   text-decoration: none;
   text-transform: uppercase;
-  color: #000;
   display: inline-block;
   padding: .5em;
   height: 100%;
@@ -149,9 +148,7 @@ a:hover {
   background-color: hsla(0,0%,0%,.6);		
 }
 #clients li {
-  margin: 1em .5em .5em 0;
-  height: 1em;
-  line-height: 1em;
+  margin: 0 .5em .5em 0;
 }
 address {
   margin-top: 1em;
