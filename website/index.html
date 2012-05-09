@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Hack & Craft</title>
+		<meta name="description" content="" />
+		<meta name="author" content="Markus Angermeier" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<link rel="shortcut icon" href="/static/favicon.ico" />
+		<link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />
+		<link href='http://fonts.googleapis.com/css?family=Jura:400' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Jura:600&text=&' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+    <link href='static/css/base.css' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+    <div id="page">
+      <header>
+        <h1 id="logo">Hack&nbsp;<span class="amp">&</span><br>Craft</h1>
+      </header>
+      
+      <section id="clients">
+        <h1>Clients</h1>
+        <ul class="hlist">
+          <li><a href="http://www.friendfund.com">friendfund</a></li>
+          <li><a href="http://www.zanox.com">zanox</a></li>
+          <li><a href="http://www.giftcannon.com">GiftCannon</a></li> 
+          <li><a href="http://www.edarling.de">eDarling</a></li>
+          <li><a href="http://www.billpy.de">BillPay</a></li>
+          <li><a href="http://foundfair.de/">FoundFair</a></li>
+          <li><a href="http://http://get.echofy.me/">echofy.me</a></li>
+          <li><a href="http://www.greatamericandays.com">Great American Days</a></li>
+          <li><a href="http://www.rocket-internet.de/">Rocket Internet</a></li>
+        </ul>
+      </section>
+
+      <section id="contact">
+         <h1>Contact</h1>
+          <a href="mailto:enquiries@hackandcraft.com">enquiries@hackandcraft.com</a><br>
+          <address>
+            Hack and Craft GmbH<br>
+            117 Landsberger Allee<br>
+            10407 Berlin<br>
+            Germany<br>
+            +49 30 99272540
+        </address>
+      </section>
+
+      <footer>
+        <aside id="legal">
+          <small>
+            <dl>
+              <dt>Impressum:</dt> <dd>Hack and Craft GmbH</dd>
+              <dt>Handelsregisternummer:</dt> <dd>141274 B</dd>
+              <dt>Registergericht:</dt> <dd>Amtsgericht Berlin Charlottenburg</dd>
+              <dt>Geschäftsführer:</dt> <dd>Henry George McCarney, Martin Peschke</dd>
+            </dl>
+          </small>
+        </aside>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        var basehue = 210;
+        var basesat = 70;
+        var baselum = 10;
+        var varhue = 90*2;
+        var varsat = 0;
+        var varlum = 0;
+        function randomizeColor() {
+          var hue = basehue + Math.floor(Math.random()*varhue);
+          if (hue > 360) {
+            hue = hue - 360;
+          };
+          if (hue < 0) {
+            hue = 360 - hue;
+          };
+          
+          var sat = basesat + Math.floor(Math.random()*varsat);
+          if (sat > 100) {
+            sat = 100;
+          };
+          if (sat < 0) {
+            sat = 0;
+          };
+          
+          var lum = baselum + Math.floor(Math.random()*varlum);
+          if (lum > 100) {
+            lum = 100;
+          };
+          if (lum < 0) {
+            lum = 0;
+          };
+          var clr = hue +',' + sat + '% ,' + lum + '%';
+          $('body').css('background-color', 'hsl(' + clr +')');
+        }
+        /*setInterval(function(){
+          randomizeColor();
+        },4100);*/
+        randomizeColor();
+        $('body *').hover(function() {
+          randomizeColor();
+        });
+      });
+    </script>
+  </body>
+</html>
