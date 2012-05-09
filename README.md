@@ -1,4 +1,4 @@
 HackandCraft
 ============
 
-public website
+public website for hack and craft
