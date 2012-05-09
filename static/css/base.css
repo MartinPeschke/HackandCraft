@@ -100,33 +100,6 @@ header {
   background: url('mshackandmscraft.png') no-repeat center top;
   background-size: contain;*/
 }
-header:before {
-  content:'Just a typographic logo. Huge type! You might try something fancy with that ampersand.';
-}
-#legal:before {
-  content:'For the footer we have to do german legal stuff etc. 10px fineprint style. Facebook et al maybe later though …';
-}
-#contact:before {
-  content:'I think we will need the whole address including phone. But make the email pop, please!';
-}
-#clients:before {
-  content:'A plain list of client buttons neatly packed together. Uppercase will solve some spelling and looks cool.';
-}
-*:before {
-  display: block;
-  color: transparent;
-  height: 1em;
-  padding: .5em;
-  position: absolute;
-  bottom: -1.8em;
-  right: 0;
-  font-style: italic;
-  font-family: Tahoma, sans-serif;
-  font-size: 10px;
-}
-*:hover:before {
-  color: hsla(0,0%,100%,.4);
-}
 h1 {
   text-transform: uppercase;
   margin-bottom: .5em;
